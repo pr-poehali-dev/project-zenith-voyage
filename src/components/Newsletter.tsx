@@ -19,10 +19,10 @@ export function Newsletter() {
         <div className="space-y-8">
           <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl font-light tracking-tight text-balance">
-              Будьте <span className="font-semibold">в курсе</span>
+              Получите <span className="font-semibold">скидку 10%</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance leading-relaxed">
-              Подпишитесь на рассылку и получайте эксклюзивные предложения, гиды по направлениям и советы от экспертов
+              Оставьте email — пришлём персональное предложение, акции на сезонный монтаж и советы по обслуживанию
             </p>
           </div>
 

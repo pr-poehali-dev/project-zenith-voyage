@@ -1,37 +1,38 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calendar, Users, Star } from "lucide-react"
+import { Star } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const packages = [
   {
-    title: "Гранд-тур по Европе",
-    duration: "14 дней",
-    groupSize: "12-16 человек",
+    title: "Стандарт",
+    area: "до 25 м²",
+    time: "1 день",
     rating: "4.9",
-    reviews: "234",
-    image: "/european-cities-paris-eiffel-tower-romantic.jpg",
-    highlights: ["Париж", "Рим", "Барселона", "Амстердам"],
-    price: "429 900 ₽",
+    reviews: "312",
+    image: "https://cdn.poehali.dev/projects/da71614f-e7c2-4386-8491-5313b534306f/files/53360c86-6992-4ccc-acc2-fe6ef349bfd5.jpg",
+    highlights: ["Кондиционер 9 BTU", "Монтаж", "Гарантия 2 года", "Вывоз упаковки"],
+    price: "35 000 ₽",
   },
   {
-    title: "Азиатское приключение",
-    duration: "10 дней",
-    groupSize: "8-12 человек",
-    rating: "4.8",
-    reviews: "189",
-    image: "/asian-temples-thailand-bangkok-golden-temple.jpg",
-    highlights: ["Бангкок", "Сингапур", "Бали", "Куала-Лумпур"],
-    price: "349 900 ₽",
+    title: "Комфорт",
+    area: "до 45 м²",
+    time: "1 день",
+    rating: "4.9",
+    reviews: "218",
+    image: "https://cdn.poehali.dev/projects/da71614f-e7c2-4386-8491-5313b534306f/files/36c7220e-1dfd-4600-9c59-39f45d85a0cd.jpg",
+    highlights: ["Инвертор 12 BTU", "Монтаж", "Гарантия 3 года", "Сервис 1 год"],
+    price: "55 000 ₽",
   },
   {
-    title: "Сафари-экспедиция",
-    duration: "7 дней",
-    groupSize: "6-10 человек",
+    title: "Премиум",
+    area: "до 70 м²",
+    time: "1-2 дня",
     rating: "5.0",
-    reviews: "156",
-    image: "/african-safari-wildlife-elephants-sunset.jpg",
-    highlights: ["Серенгети", "Масаи Мара", "Нгоронгоро", "Амбосели"],
-    price: "599 900 ₽",
+    reviews: "97",
+    image: "https://cdn.poehali.dev/projects/da71614f-e7c2-4386-8491-5313b534306f/files/9f733cd1-33fd-48a0-b8ae-185e5db9154a.jpg",
+    highlights: ["Инвертор 18 BTU", "Монтаж + трасса", "Гарантия 5 лет", "Сервис 2 года"],
+    price: "90 000 ₽",
   },
 ]
 
@@ -42,10 +43,10 @@ export function PopularPackages() {
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
           <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-6 text-balance">
-            Популярные <span className="font-semibold">туры</span>
+            Готовые <span className="font-semibold">пакеты</span>
           </h2>
           <p className="text-lg text-muted-foreground text-balance leading-relaxed">
-            Тщательно подобранные туры, объединяющие лучшие направления и впечатления
+            Всё включено — оборудование, монтаж и гарантия. Выбирайте пакет и мы приедем завтра
           </p>
         </div>
 
@@ -81,12 +82,12 @@ export function PopularPackages() {
                   {/* Meta Info */}
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                     <div className="flex items-center gap-1.5">
-                      <Calendar className="h-4 w-4" />
-                      <span>{pkg.duration}</span>
+                      <Icon name="Home" size={16} />
+                      <span>{pkg.area}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <Users className="h-4 w-4" />
-                      <span>{pkg.groupSize}</span>
+                      <Icon name="Clock" size={16} />
+                      <span>{pkg.time}</span>
                     </div>
                   </div>
 
@@ -103,11 +104,11 @@ export function PopularPackages() {
                 {/* Price & CTA */}
                 <div className="flex items-center justify-between pt-6 border-t border-border">
                   <div>
-                    <div className="text-xs text-muted-foreground mb-1">Цена от</div>
+                    <div className="text-xs text-muted-foreground mb-1">Цена под ключ</div>
                     <div className="text-2xl font-semibold text-primary">{pkg.price}</div>
                   </div>
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
-                    Забронировать
+                    Заказать
                   </Button>
                 </div>
               </div>
